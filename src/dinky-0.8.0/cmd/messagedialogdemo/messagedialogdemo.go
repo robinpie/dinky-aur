@@ -1,0 +1,53 @@
+package main
+
+import (
+	"dinky/internal/tui/dialog"
+	"log"
+	"os"
+
+	"github.com/rivo/tview"
+)
+
+func main() {
+	logFile := setupLogging()
+	defer logFile.Close()
+
+	app := tview.NewApplication()
+	app.EnableMouse(true)
+	log.Println("Starting MessageDialog Demo...")
+
+	messageDialog := dialog.NewMessageDialog(app)
+	messageDialog.OnButtonClick = func(button string, index int) {
+		log.Printf("Button clicked: %s (index: %d)", button, index)
+		app.Stop()
+	}
+	messageDialog.OnClose = func() {
+		log.Println("Message dialog closed")
+		app.Stop()
+	}
+
+	// style.StyleMessageDialog(messageDialog)
+
+	topLayout := tview.NewFlex()
+	topLayout.AddItem(nil, 0, 1, false)
+	topLayout.AddItem(messageDialog, 80, 0, false)
+	topLayout.AddItem(nil, 0, 1, false)
+	app.SetRoot(topLayout, true)
+
+	messageDialog.Open("Question", "Do you want to proceed?\n\nIt will be way cool.",
+		[]string{"Yes", "No", "Cancel"}, 50, 9)
+	messageDialog.FocusButton(0)
+
+	if err := app.Run(); err != nil {
+		log.Fatalf("Application error: %v", err)
+	}
+}
+
+func setupLogging() *os.File {
+	logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0666)
+	if err != nil {
+		panic("Failed to open log file: " + err.Error())
+	}
+	log.SetOutput(logFile)
+	return logFile
+}
