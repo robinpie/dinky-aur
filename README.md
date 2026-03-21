@@ -92,7 +92,7 @@ Created by **Simon Edwards** - [@sedwards2009](https://github.com/sedwards2009) 
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests on the [GitHub repository](https://github.com/sedwards2009/dinky).
+Contributions are welcome! Please feel free to submit issues, feature requests, or pull requests.
 
 ---
 
