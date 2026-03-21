@@ -24,7 +24,7 @@ The Arch Go packaging guidelines recommend using CGO with external linkmode for 
 - The upstream project explicitly builds this way (see `.goreleaser.yaml`).
 - Dinky is pure Go with no C bindings.
 
-Removed all upstream Dinky source code and build artifacts from this fork. This repo now serves purely as the downstream AUR packaging repo, containing only `PKGBUILD`, `.SRCINFO`, `README.md`, `LICENSE`, and packaging documentation.
+Removed all upstream Dinky source code and build artifacts from this fork. This repo now serves purely as the downstream AUR packaging repo, containing only `PKGBUILD`, `.SRCINFO`, `README.md`, `LICENSE`, packaging documentation, and the images referred to by README.md.
 
 ### Remaining steps
 
@@ -38,4 +38,3 @@ Removed all upstream Dinky source code and build artifacts from this fork. This 
    git commit -m "Initial upload: dinky 0.8.0"
    git push origin master
    ```
-
