@@ -1,4 +1,0 @@
-msbuild
-\.(.*proj|props|targets|tasks)$
-
-

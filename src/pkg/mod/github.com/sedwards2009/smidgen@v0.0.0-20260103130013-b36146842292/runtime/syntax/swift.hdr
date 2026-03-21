@@ -1,4 +1,0 @@
-swift
-\.swift$
-^#!.*bin/(env +)?swift( |$)
-

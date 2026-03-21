@@ -1,4 +1,0 @@
-justfile
-(^\.?[Jj]ustfile|\.just)$
-^#!.*/(env +)?[bg]?just --justfile
-

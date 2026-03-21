@@ -1,4 +1,0 @@
-conky
-(\.*conkyrc.*$|conky.conf)
-
-

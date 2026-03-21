@@ -1,4 +1,0 @@
-sage
-\.sage$
-^#!.*/(env +)?sage( |$)
-

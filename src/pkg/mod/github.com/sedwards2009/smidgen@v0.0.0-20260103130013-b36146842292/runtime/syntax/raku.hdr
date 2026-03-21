@@ -1,4 +1,0 @@
-raku
-\.(p(l|m|od)?6|raku(mod|doc|test)?|nqp)$
-
-

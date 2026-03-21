@@ -1,4 +1,0 @@
-crontab
-crontab$|/tmp/crontab\.\w+$
-^#.*?/etc/crontab
-

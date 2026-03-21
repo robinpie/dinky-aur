@@ -1,4 +1,0 @@
-csharp-script
-\.csx$
-^#!.*/(env +)?dotnet-script( |$)
-

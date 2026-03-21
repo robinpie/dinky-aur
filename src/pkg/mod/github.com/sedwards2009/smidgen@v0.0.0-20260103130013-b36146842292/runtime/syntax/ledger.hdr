@@ -1,4 +1,0 @@
-ledger
-(^|\.|/)(ledger|ldgr|beancount|bnct)$
-
-

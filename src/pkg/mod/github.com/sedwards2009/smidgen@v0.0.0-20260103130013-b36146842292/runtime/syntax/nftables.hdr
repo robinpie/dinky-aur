@@ -1,4 +1,0 @@
-nftables
-nftables.conf$
-^(#!.*/(env +)?nft( |$)|flush +ruleset)
-

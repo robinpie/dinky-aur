@@ -1,4 +1,0 @@
-dockerfile
-((Docker|Container)file[^/]*$|\.(docker|container)file$)
-
-

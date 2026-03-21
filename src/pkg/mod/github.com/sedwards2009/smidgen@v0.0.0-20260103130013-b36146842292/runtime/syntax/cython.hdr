@@ -1,4 +1,0 @@
-cython
-\.pyx$|\.pxd$|\.pyi$
-
-

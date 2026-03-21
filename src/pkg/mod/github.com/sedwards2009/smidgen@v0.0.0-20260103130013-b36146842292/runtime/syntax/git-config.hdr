@@ -1,4 +1,0 @@
-git-config
-git(config|modules)$|\.git/config$
-
-

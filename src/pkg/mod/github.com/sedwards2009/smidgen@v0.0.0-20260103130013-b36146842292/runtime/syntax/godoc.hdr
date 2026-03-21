@@ -1,4 +1,0 @@
-godoc
-\.godoc$
-package.*import
-

@@ -1,4 +1,0 @@
-yum
-\.repo$|yum.*\.conf$
-
-
