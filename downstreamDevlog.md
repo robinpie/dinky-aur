@@ -27,3 +27,7 @@ The Arch Go packaging guidelines recommend using CGO with external linkmode for 
 Removed all upstream Dinky source code and build artifacts from this fork. This repo now serves purely as the downstream AUR packaging repo, containing only `PKGBUILD`, `.SRCINFO`, `README.md`, `LICENSE`, packaging documentation, and the images referred to by README.md.
 
 Published `dinky` v0.8.0 to the AUR. Set up AUR account (robinpie), configured SSH key (`~/.ssh/aur`) with `~/.ssh/config` entry for `aur.archlinux.org`, and pushed to `ssh+git://aur@aur.archlinux.org/dinky.git`.
+
+# pkgrel 2
+
+Fixed email in maintainer line
