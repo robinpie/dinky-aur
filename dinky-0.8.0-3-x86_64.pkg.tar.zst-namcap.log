@@ -1,0 +1,1 @@
+dinky W: ELF file ('usr/bin/dinky') lacks FULL RELRO, check LDFLAGS.

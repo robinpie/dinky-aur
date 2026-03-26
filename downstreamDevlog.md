@@ -31,3 +31,20 @@ Published `dinky` v0.8.0 to the AUR. Set up AUR account (robinpie), configured S
 # pkgrel 2
 
 Fixed email in maintainer line
+
+# pkgrel 3 — 2026-03-26
+
+Compliance review against updated packaging guidelines:
+- Added 0BSD packaging source LICENSE file to `-aur-pkg/` directory per RFC 0040.
+- Confirmed `-buildmode=pie` should remain in GOFLAGS — Go supports PIE with internal linking on linux/amd64 even with `CGO_ENABLED=0`. Removing it caused new namcap warnings (lacks PIE, unstripped). Kept as-is.
+- Regenerated `.SRCINFO`.
+
+Validation:
+- `makepkg -sf` — build succeeded.
+- `namcap PKGBUILD` — clean.
+- `namcap dinky-0.8.0-3-x86_64.pkg.tar.zst` — one expected warning (lacks FULL RELRO, unavoidable for pure Go/CGO_ENABLED=0).
+- `makepkg -si` — installed and runs (`dinky --version` works).
+
+- Clean chroot build (`makechrootpkg -r ~/tempchroot -c -u -n`) — passed. Only the expected FULL RELRO warning.
+
+**PENDING:** AUR push.
