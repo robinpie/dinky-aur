@@ -1,3 +1,5 @@
+archiving to move all my aur stuff into one repo
+
 ![Dinky Logo](logo_small.png)
 
 # Dinky
